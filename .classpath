@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="2DGraphicCore/2DGraphicCore/src"/>
+	<classpathentry kind="src" path="JFKBits/JFKBits/src"/>
+	<classpathentry kind="src" path="skeletons/Exercice1/src"/>
+	<classpathentry kind="src" path="skeletons/Exercice2/src"/>
+	<classpathentry kind="src" path="skeletons/Exercice3/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
