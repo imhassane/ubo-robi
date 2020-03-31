@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.Dimension;
 import graphicLayer.GRect;
 import graphicLayer.GSpace;
