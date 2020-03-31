@@ -13,8 +13,9 @@ import jfkbits.LispParser;
 import jfkbits.LispParser.Expr;
 import jfkbits.LispParser.ParseException;
 
+// Exercice 2.2
 public class Exercice2_1_0 {
-	GSpace space = new GSpace("Exercice 2_1", new Dimension(200, 100));
+	GSpace space = new GSpace("Exercice 2_2", new Dimension(200, 100));
 	GRect robi = new GRect();
 	String script = "(script (space color black) (robi color yellow) (robi translate 10 0) (space sleep 100) (robi translate 0 10) (robi sleep 100) (robi translate -10 0) (robi sleep 100 ) (robi translate 0 -10))";
 
