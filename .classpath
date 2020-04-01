@@ -5,6 +5,7 @@
 	<classpathentry kind="src" path="skeletons/Exercice1/src"/>
 	<classpathentry kind="src" path="skeletons/Exercice2/src"/>
 	<classpathentry kind="src" path="skeletons/Exercice3/src"/>
+	<classpathentry kind="src" path="skeletons/Exercice4/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
