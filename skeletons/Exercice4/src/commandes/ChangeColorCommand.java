@@ -2,6 +2,7 @@ package commandes;
 
 import java.awt.Color;
 import jfkbits.ExprList;
+import jfkbits.LispParser.Expr;
 
 public class ChangeColorCommand implements Command {
 

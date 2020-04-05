@@ -3,6 +3,7 @@ package commandes;
 import java.awt.Point;
 
 import jfkbits.ExprList;
+import jfkbits.LispParser.Expr;
 
 public class TranslateCommand implements Command {
 
