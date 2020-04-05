@@ -108,6 +108,7 @@ public  class GBounded extends GElement implements GContainer{
 
 	public void setDimension(Dimension dim) {
 		this.dim = dim;
+		this.repaint();
 	}
 
 	public void setWidth(Integer width) {

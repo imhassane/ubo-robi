@@ -26,6 +26,7 @@ public class AddElement implements Command {
 		
 		GSpace space = (GSpace) env.getReference("space").getReceiver();
 		space.addElement((GElement)ref.getReceiver());
+		space.repaint();
 		
 		return null;
 	}

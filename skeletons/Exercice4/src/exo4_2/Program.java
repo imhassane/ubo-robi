@@ -4,6 +4,7 @@ package exo4_2;
 	
 (space add robi (rect.class new))
 (robi translate 10 10)
+(robi setDim 30 30)
 (robi setColor yellow)
 (space add momo (oval.class new))
 (momo setColor red)
