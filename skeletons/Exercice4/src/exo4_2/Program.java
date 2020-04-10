@@ -1,19 +1,11 @@
 package exo4_2;
+// Exo 4.3.
 
 /*
-	
-(space add robi (rect.class new))
-(robi translate 10 10)
-(robi setDim 30 30)
-(robi setColor yellow)
-(space add momo (oval.class new))
-(momo setColor red)
-(momo translate 20 20)
-(space add pif (image.class new alien.gif))
-(pif translate 30 30)
-(space add hello (label.class new "Hello world"))
-(hello translate 10 10)
-(hello setColor black)
+ * 
+ * Il faudra placer les images dans le repertoire du projet pas dans celui de l'exercice 4
+(space addScript addImage ((self filename ) (self add im ( Image new filename ) ) ) )
+(space addImage alien.gif )
 
 */
 
@@ -36,7 +28,7 @@ public class Program {
 	Environment environment = new Environment();
 
 	public Program() {
-		GSpace space = new GSpace("Exercice 4", new Dimension(200, 100));
+		GSpace space = new GSpace("Exercice 4.4", new Dimension(200, 100));
 		space.open();
 
 		Reference spaceRef = new Reference(space);
@@ -47,9 +39,11 @@ public class Program {
 
 		spaceRef.addCommand("setColor", new SetColor());
 		spaceRef.addCommand("sleep", new Sleep());
+		spaceRef.addCommand("setDim", new SetSpaceDim());
 
 		spaceRef.addCommand("add", new AddElement(environment));
 		spaceRef.addCommand("del", new DelElement(environment));
+		spaceRef.addCommand("addScript", new AddScript(environment));
 		
 		rectClassRef.addCommand("new", new NewElement());
 		ovalClassRef.addCommand("new", new NewElement());
@@ -58,9 +52,16 @@ public class Program {
 
 		environment.addReference("space", spaceRef);
 		environment.addReference("rect.class", rectClassRef);
+		environment.addReference("Rect", rectClassRef);
+		
 		environment.addReference("oval.class", ovalClassRef);
+		environment.addReference("Oval", ovalClassRef);
+		
 		environment.addReference("image.class", imageClassRef);
+		environment.addReference("Image", imageClassRef);
+		
 		environment.addReference("label.class", stringClassRef);
+		environment.addReference("Label", stringClassRef);
 		
 		this.mainLoop();
 	}

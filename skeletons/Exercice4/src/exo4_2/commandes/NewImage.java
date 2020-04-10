@@ -25,9 +25,8 @@ public class NewImage implements Command {
 			
 			GImage e = new GImage(image);
 			Reference ref = new Reference(e);
-			ref.addCommand("setColor", new setImageColor());
-			ref.addCommand("translate", new ImageTranslate());
-			ref.addCommand("setDim", new SetImageDim());
+			ref.addCommand("translate", new Translate());
+			ref.addCommand("setDim", new SetDim());
 			return ref;
 		} catch (IOException e) {
 			System.out.println("Cette image n'existe pas");

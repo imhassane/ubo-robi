@@ -22,7 +22,12 @@ public class AddElement implements Command {
 		Reference ref = env.getReference(values[0]);
 		ref = (Reference) ref.getCommandByName(values[1]).run(ref, method);
 		
-		env.addReference(method.get(2).toString(), ref);
+		String name = method.get(0).toString() + "." + method.get(2).toString();
+		ref.addCommand("add", new AddElement(env));
+		ref.addCommand("del", new DelElement(env));
+		ref.addCommand("addScript", new AddScript(env));
+		
+		env.addReference(name, ref);
 		
 		GSpace space = (GSpace) env.getReference("space").getReceiver();
 		space.addElement((GElement)ref.getReceiver());
