@@ -1,4 +1,4 @@
-package exo4_2.commandes;
+package exo4_4.commandes;
 
 import java.awt.Image;
 import java.io.File;
@@ -8,14 +8,24 @@ import java.nio.file.Paths;
 
 import javax.imageio.ImageIO;
 
-import exo4_2.Command;
-import exo4_2.Reference;
+import exo4_4.Command;
+import exo4_4.Reference;
 import graphicLayer.GImage;
 import jfkbits.ExprList;
 import jfkbits.LispParser.Expr;
 
 public class NewImage implements Command {
 
+	/**
+	 * On va récupérer le nom de l'image à partir des paramètres.
+	 * Puis on va vérifier que l'image existe bien dans le repertoire
+	 * actuel.
+	 * On va créer une image qu'on ajoutera dans l'espace.
+	 * On lui ajoute quelques commandes par défaut.
+	 * @param receiver
+	 * @param method
+	 * @return
+	 */
 	@Override
 	public Expr run(Reference receiver, ExprList method) {
 		try {

@@ -1,18 +1,25 @@
-package exo4_2;
-// Exo 4.3.
+package exo4_4;
+
+// Exo 4.4.
 
 /*
- * 
- * Il faudra placer les images dans le repertoire du projet pas dans celui de l'exercice 4
-(space addScript addImage ((self filename ) (self add im ( Image new filename ) ) ) )
-(space addImage alien.gif )
+ Le repertoire de base pour les images est dans le dossier courant: System.getProperty("user.dir")
 
+> (space add robi (Rect new))
+> (space.robi translate 10 10)
+> (space.robi setColor white)
+> (space.robi addImage im alien.jpg)
+> (space.robi add im (Image new alien.gif))
+> (space.robi.im translate 50 50)
+> (space.robi addScript ccolor ((self color) (self setColor color)))
+> (space.robi ccolor green) 
 */
 
 
 import java.awt.Dimension;
 
-import exo4_2.commandes.*;
+import exo4_4.commandes.*;
+import exo4_4.commandes.SetColor;
 import graphicLayer.GImage;
 import graphicLayer.GOval;
 import graphicLayer.GRect;

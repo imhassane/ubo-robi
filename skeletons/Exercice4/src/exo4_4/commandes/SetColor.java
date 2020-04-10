@@ -1,15 +1,25 @@
-package exo4_2.commandes;
+package exo4_4.commandes;
 
 import java.awt.Color;
 import java.lang.reflect.Method;
 
-import exo4_2.Command;
-import exo4_2.Reference;
+import exo4_4.Command;
+import exo4_4.Reference;
 import jfkbits.ExprList;
 import jfkbits.LispParser.Expr;
 
+/**
+ * SetColor va définir la couleur d'un élement.
+ */
 public class SetColor implements Command {
 
+	/**
+	 * On cherche la méthode setColor dans la classe de l'élement
+	 * puis on lui la couleur recue en paramètres et on le met à jour.
+	 * @param receiver
+	 * @param method
+	 * @return
+	 */
 	@Override
 	public Expr run(Reference receiver, ExprList method) {
 		try {

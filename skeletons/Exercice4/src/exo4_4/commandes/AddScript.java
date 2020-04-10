@@ -1,8 +1,8 @@
-package exo4_2.commandes;
+package exo4_4.commandes;
 
-import exo4_2.Command;
-import exo4_2.Environment;
-import exo4_2.Reference;
+import exo4_4.Command;
+import exo4_4.Environment;
+import exo4_4.Reference;
 import graphicLayer.GSpace;
 import jfkbits.ExprList;
 import jfkbits.LispParser;
@@ -14,16 +14,16 @@ public class AddScript implements Command {
 	public AddScript(Environment env) {
 		this.env = env;
 	}
-	
-	private void non() {
-		/* (space add robi (Rect new))
-		// (space.robi addScript addRect (( self name w c ) ( self add name ( Rect new ) )( self.name setColor c ) ( self.name setDim w w ) ) ) )
-		String script = method.get(3).toString().replace("self", method.get(0).toString());
-		Reference ref = env.getReference(method.get(0).toString());
-		ref.addCommand(method.get(2).toString(), new NewScript(ref, script));
-		*/
-	}
 
+	/**
+	 * On récupère le script à partir de method
+	 * puis on ajoute à la référence actuelle un nouveau
+	 * script qui va se charger de récupérer les paramètres du nouveau
+	 * script et va les binder au script.
+	 * @param receiver
+	 * @param method
+	 * @return null
+	 */
 	@Override
 	public Expr run(Reference receiver, ExprList method) {
 		String script = method.get(3).toString().replace("self", method.get(0).toString());

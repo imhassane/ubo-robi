@@ -1,8 +1,6 @@
-package exo4_2.commandes;
+package exo4_4.commandes;
 
-import exo4_2.Command;
-import exo4_2.Environment;
-import exo4_2.Reference;
+import exo4_4.*;
 import graphicLayer.GElement;
 import graphicLayer.GSpace;
 import jfkbits.ExprList;
@@ -21,14 +19,17 @@ public class AddElement implements Command {
 		
 		Reference ref = env.getReference(values[0]);
 		ref = (Reference) ref.getCommandByName(values[1]).run(ref, method);
-		
+
+		// EXO 4.3: space add robi -> space.robi
 		String name = method.get(0).toString() + "." + method.get(2).toString();
 		ref.addCommand("add", new AddElement(env));
 		ref.addCommand("del", new DelElement(env));
 		ref.addCommand("addScript", new AddScript(env));
-		
+
+		// EXO: 4.3: Ajout de space.robi dans l'environnement.
 		env.addReference(name, ref);
-		
+
+		// On rajoute les éléments dans l'espace et on le met à jour.
 		GSpace space = (GSpace) env.getReference("space").getReceiver();
 		space.addElement((GElement)ref.getReceiver());
 		space.repaint();

@@ -1,15 +1,26 @@
-package exo4_2.commandes;
+package exo4_4.commandes;
 
 import java.awt.Point;
 import java.lang.reflect.Method;
 
-import exo4_2.Command;
-import exo4_2.Reference;
+import exo4_4.Command;
+import exo4_4.Reference;
 import jfkbits.ExprList;
 import jfkbits.LispParser.Expr;
 
+/**
+ * Translate va déplacer un élément dans l'espace
+ */
 public class Translate implements Command {
 
+	/**
+	 * On récupère la position actuelle de l'element
+	 * on lui ajoute les valeurs recues et on met
+	 * à jour
+	 * @param receiver
+	 * @param method
+	 * @return
+	 */
 	@Override
 	public Expr run(Reference receiver, ExprList method) {
 		try {
